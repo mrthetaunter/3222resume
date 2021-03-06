@@ -1,0 +1,306 @@
+body, html {
+	font-family: 'Raleway', sans-serif;
+	height: 100%;
+	margin: 0;
+	color: #d8d8d8;
+	text-align: center;
+	background-color: #262525;
+	font-size: 1vw;
+}
+
+/*** BACKGROUND IMAGES ***/
+	/* Collective setting */
+	.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		
+		min-height: 100%;
+	}
+	
+	/* Header bg img */
+	.bgimg-1 {
+		background-image: url("usctc-bg.jpg");
+		padding-bottom: 50px;
+	}
+
+	/* Work bg img */
+	.bgimg-2 {
+		background-image: url("workxp-bg.jpg");
+		color: black;
+	}
+
+	/* Skills bg img */
+	.bgimg-3 {
+		background-image: url("skills-bg.jpg");
+	}
+
+	/* Interests bg img */
+	.bgimg-4 {
+		background-image: url("interests-bg.jpg");
+	}
+
+
+/*** STICKY HEADER/TITLE FOR EACH SECTION ***/
+	/* Sticky titles */
+	.sticky {
+		position: sticky;
+		top: 0;
+		
+		margin: 0;
+		padding: 20px;
+		background-size: cover;
+		
+		font-weight: 400;
+		font-size: 300%;
+		color: #d8d8d8;
+		z-index: 100;
+	}
+
+	/* Education bar */
+	#edu-sticky {
+		background-color: #141414;
+	}
+
+	/* Work XP bar */
+	#work-sticky {
+		background-color: #2b2933;
+	}
+
+	/* Skill XP bar */
+	#skills-sticky{
+		border-radius: 0px 0px 50px 50px;
+		background-color: #365d40;
+		margin: auto;
+		width: 50%;
+	}
+	
+	/* Interest bar */
+	#interest-sticky {
+		background-color: #2b2933;
+		border-radius: 0px 0px 50px 50px;
+		margin: auto;
+		width: 80%;
+	}
+
+/*** CONTENTS FOR EACH SECTION ***/
+	/* INTRODUCTION */
+		/* header profpic */
+		#profpic {
+			padding-top: 50px;
+			padding-bottom: 25px;
+			height: 250px;
+			width: 250px;
+		}
+
+		/* header1, DARYL BUTAR */
+		.h1-DB {
+			font-size: 300%;
+			padding: 0;
+		}
+
+		/* DARYL BUTAR text */
+		.DB-span {
+			color: #d8d8d8;
+			font-weight: 200;
+			
+			background-color: rgba(0, 0, 0, 0.6);
+			border-style: solid;
+			border-color: #d8d8d8;
+			border-width: thin;
+			
+			transition-property: background-color border-color color;
+			transition-duration: 1s;
+			transition-delay: 0;
+		}
+
+		/* DARYL BUTAR hover */
+		.DB-span:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+			border-color: black;
+			color: black;
+		}
+
+	/* EDUCATION*/
+		/* School names*/
+		.schoolname {
+			font-weight: 400;
+			font-size: 125%;
+			margin: 0;
+		}
+		/* School info*/
+		.schoolinfo {
+			font-weight: 100;
+			font-size: 100%;
+			margin: 0;
+		}
+
+	/* WORK EXPERIENCE */
+		/* Work xp*/
+		.workname {
+			font-weight: 400;
+			font-size: 175%;
+			margin: 0;
+		}
+		/* Work xp info*/
+		.workinfo {
+			font-weight: 100;
+			font-size: 125%;
+			margin: 0;
+		}
+
+	/* SKILLS */
+		/* Container of skill level divs */
+		.levels-container {
+			margin: auto;
+			padding: 1%;
+			padding-bottom: 0;
+			font-size: 155%;
+			font-weight: 700;
+			width: 53.6%;
+			height: 500px;
+			position: relative;
+		}
+
+		/* SKILL LEVELS */
+		.levels-container span {
+			width: 100px;
+			padding: auto;
+			font-weight: 500;
+			color: white;
+			
+			transition-property: color font-weight;
+			transition-duration: 0.5s;
+			transition-delay: 0;
+		}
+			
+		/* CHANGE GCOLOR VIA HOVER */
+		.skill-level:hover {
+			color: #365d40;
+			font-weight: 900;
+		}
+			
+		/* HIDE CONTENT WITH TRANSITION BEFORE HOVER */
+		.hide-novice, .hide-advbeg, .hide-comp, .hide-prof, .hide-expert {
+			transition: opacity 1s ease-out;
+			opacity: 0;
+			height: 0;
+			width: 100%;
+			overflow: hidden;
+		}
+
+			
+		/* DISPLAY AFTER HOVER */
+		#novice:hover ~ .hide-novice{
+			opacity: 1;
+			height: auto;
+		}
+		#advbeginner:hover ~ .hide-advbeg{
+			opacity: 1;
+			height: auto;
+		}
+		#competent:hover ~ .hide-comp{
+			opacity: 1;
+			height: auto;
+		}
+		#proficient:hover ~ .hide-prof{
+			opacity: 1;
+			height: auto;
+		}
+		#expert:hover ~ .hide-expert{
+			opacity: 1;
+			height: auto;
+		}
+		/* LOGOS SETTINGS */
+		.logos {
+			width: 10vw;
+			padding: 5%;
+			padding-top: 100px;
+		}
+		#HTML, #CSS {
+			width: 12vw;
+		}
+		#Java {
+			width: 15vw;
+			padding-top: 50pw;
+		}
+
+		#no-skills-yet {
+			font-weight: 900;
+			font-size: 200%;
+			width: auto;
+		}
+		/* Just a note*/
+		.note-skill {
+			font-weight: 500;
+			font-size: 80%;
+			font-style: italic;
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+		}
+		
+	/* INTERESTS */
+		/* Main container of skill level divs */
+		.interest-container {
+			margin: auto;
+			padding: 1%;
+			padding-bottom: 0;
+			font-size: 350%;
+			font-weight: 700;
+			width: 46.5%;
+			height: 400px;
+			position: relative;
+		}
+		
+		/* All interests */
+		.interest-container div {
+			margin: 2%;
+			float: left;
+			
+			color: #d8d8d8;
+			font-weight: 400;
+			
+			background-color: rgba(0, 0, 0, 0.8);
+			border-style: solid;
+			border-color: #d8d8d8;
+			border-width: thin;
+			
+			transition-property: background-color border-color color;
+			transition-duration: 1s;
+			transition-delay: 0;
+		}
+
+		/* VISUAL CHANGE VIA HOVER, collective */
+		/* individual id's might be used for future dev */
+		.interest-container div:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+			border-color: black;
+			color: black;
+		}
+
+/*** OTHERS/MISC ***/
+	/* Blank divider*/
+	#blankbar {
+		margin: 0;
+		padding: 10px;
+		background-color: #141414;
+		color: #141414;
+	}
+	.hovertip, .note-skill {
+		font-size: 50%;
+		font-style: italic;
+		font-weight: 400;
+	}
+	.note-skill {
+		font-size: 70%;
+		font-style: italic;
+		font-weight: 400;
+	}
+	/* Footer(?) */
+	#footer {
+		margin: 0;
+		padding: 15px;
+		color: #d8d8d8;
+		background-color: #2b2933;
+	}
